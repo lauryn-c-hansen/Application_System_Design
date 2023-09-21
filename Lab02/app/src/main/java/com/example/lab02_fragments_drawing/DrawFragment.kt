@@ -14,6 +14,7 @@ import android.view.MotionEvent
 class DrawFragment : Fragment() {
 
     //@RequiresApi(Build.VERSION_CODES.O)
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -24,12 +25,8 @@ class DrawFragment : Fragment() {
         viewModel.bitmap.observe(viewLifecycleOwner) {
             binding.customView.setBitMap(it)
         }
-//        viewModel.color.observe(viewLifecycleOwner) {
-//            binding.customView.drawCircle(it)
-//        }
 
         //Put touch listener here
-
         binding.customView.setOnTouchListener{
                 v: View,
                 event: MotionEvent
@@ -44,10 +41,6 @@ class DrawFragment : Fragment() {
                          true
             //We'll want something here that draws to our bitmap
         }
-
-
-
         return binding.root
-
     }
 }

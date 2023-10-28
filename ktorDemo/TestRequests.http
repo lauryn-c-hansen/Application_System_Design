@@ -1,0 +1,20 @@
+POST http://127.0.0.1:8080/posts
+Content-Type: application/json
+
+{
+  "text" : "Cute"
+}
+
+###
+
+GET http://127.0.0.1:8080/posts
+
+###
+
+
+GET  http://127.0.0.1:8080/posts/1/delete
+MY_SESSION: ffa21cffa7e4e4bb9a764490d36e40b3
+
+
+
+
